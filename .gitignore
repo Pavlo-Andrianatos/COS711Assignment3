@@ -1,0 +1,8 @@
+# Developed in pycharm, don't track the .idea folder
+.idea
+
+# Ignore subfolders for each model's generated images
+dataset/*
+model/*
+RCNN_train_and_val_results/*
+result/*
