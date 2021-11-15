@@ -81,15 +81,13 @@ if __name__ == '__main__':
         plt.savefig("Class_distribution_in_data.png")
 
     # Map classes to numerical values instead of string literals for pytorch to use
-    class2index = {
+    classLiteralToNumericalValue = {
         "fruit_healthy": 1,
         "fruit_brownspot": 2,
         "fruit_woodiness": 3
     }
 
-    idx2class = {v: k for k, v in class2index.items()}
-
-    train_dataframe['class'].replace(class2index, inplace=True)
+    train_dataframe['class'].replace(classLiteralToNumericalValue, inplace=True)
 
     image_ids_for_dataframe = train_dataframe['Image_ID'].unique()
 
